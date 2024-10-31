@@ -8,18 +8,38 @@ POST {{server}}/tasks
 Content-Type: application/json
 
 {
-
-    "description": "Improving nodejs skills"
+    "title": "teted title",
+    "description": "Improvinog nodejs skills"
 }
 
 ### get all Tasks
 GET {{server}}/tasks
 
 ### get task by id
-GET {{server}}/tasks/84fba823-f9a6-46fa-851b-e7501537a1c9
+GET {{server}}/tasks/1
 
 ### delete task
-DELETE {{server}}/tasks/1a29fba9-267c-4416-8ef2-72770a3f6897
+DELETE {{server}}/tasks/2
 
 ### updateTask 
-PATCH {{server}}/tasks?id=2d1e2a3d-836d-4cdc-9670-33293351e5ab&status=IN_PROGRESS
+PATCH {{server}}/tasks?id=1&status=IN_PROGRESS
+
+#######USER 
+## sign up
+POST {{server}}/auth/signup
+Content-Type: application/json
+
+{
+    "username": "lremq",
+    "password": "12561892"
+}
+
+#######USER 
+## sign in
+POST {{server}}/auth/signin
+Content-Type: application/json
+
+{
+    "username": "lremq",
+    "password": "12561892"
+}
